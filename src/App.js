@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import About from './Components/About';
+import Navbar from './Components/Navbar.js';
+import TextConv from './Components/TextConv.js';
 
 function App() {
+  const webTitle = "TextUtils";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Navbar title={webTitle} aboutTextUtils = "About"/>
+    <div className="container">
+      <TextConv />
+      {/* <About title={webTitle} /> */}
     </div>
+    </>
+
   );
 }
 
